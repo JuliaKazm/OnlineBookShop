@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publishers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="Publishers.xsd">
+    <publisher>
+        <publisher_id>1</publisher_id>
+        <name>Publisher A</name>
+        <phone_number>1234567890</phone_number>
+    </publisher>
+    <publisher>
+        <publisher_id>2</publisher_id>
+        <name>Publisher B</name>
+        <phone_number>9876543210</phone_number>
+    </publisher>
+</publishers>

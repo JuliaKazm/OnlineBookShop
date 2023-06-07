@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="Orders.xsd">
+    <order>
+        <orders_id>1</orders_id>
+        <customer_id>123</customer_id>
+        <order_date>2023-05-30</order_date>
+        <order_status>Processing</order_status>
+    </order>
+    <order>
+        <orders_id>2</orders_id>
+        <customer_id>456</customer_id>
+        <order_date>2023-06-01</order_date>
+        <order_status>Shipped</order_status>
+    </order>
+</orders>

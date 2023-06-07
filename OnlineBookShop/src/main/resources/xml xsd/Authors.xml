@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="Authors.xsd">
+    <author>
+        <author_id>1</author_id>
+        <last_name>Doe</last_name>
+    </author>
+    <author>
+        <author_id>2</author_id>
+        <last_name>Smith</last_name>
+    </author>
+</Authors>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookStocks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="BookStocks.xsd">
+    <bookStock>
+        <book_stock_id>1</book_stock_id>
+        <address>123 Main St</address>
+        <phone_number>123-456-7890</phone_number>
+        <department_id>1</department_id>
+    </bookStock>
+    <bookStock>
+        <book_stock_id>2</book_stock_id>
+        <address>456 Elm St</address>
+        <phone_number>987-654-3210</phone_number>
+        <department_id>2</department_id>
+    </bookStock>
+</bookStocks>
