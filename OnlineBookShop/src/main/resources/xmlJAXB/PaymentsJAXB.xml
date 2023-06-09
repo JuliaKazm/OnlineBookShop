@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+    <payment payment_id="1">
+        <customer_id>100</customer_id>
+        <order_id>200</order_id>
+        <payment_amount>100.00</payment_amount>
+        <payment_date>2023-05-30</payment_date>
+    </payment>
+    <customer customer_id="100">
+        <first_name>John</first_name>
+        <last_name>Doe</last_name>
+        <address>123 Main St</address>
+        <contact_details>john.doe@example.com</contact_details>
+    </customer>
+    <order orders_id="200">
+        <customer_id>100</customer_id>
+        <order_date>2023-05-30</order_date>
+        <order_status>Pending</order_status>
+    </order>
+</root>

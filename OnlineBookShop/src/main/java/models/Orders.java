@@ -1,11 +1,21 @@
 package models;
 
 import java.sql.Date;
+import jakarta.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jaxb.DateAdapter;
 
+@XmlRootElement(name = "order")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Orders {
+    @XmlElement(name = "orders_id")
     private int orders_id;
+    @XmlElement(name = "customer_id")
     private Integer customer_id;
+    @XmlElement(name = "order_date")
+    @XmlJavaTypeAdapter(DateAdapter.class)
     private Date order_date;
+    @XmlElement(name = "order_status")
     private String order_status;
 
     public Orders() {

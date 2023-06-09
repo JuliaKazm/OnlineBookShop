@@ -1,12 +1,25 @@
 package models;
+
 import java.math.BigDecimal;
 import java.sql.Date;
+import jakarta.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jaxb.DateAdapter;
 
+
+@XmlRootElement(name = "payment")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Payments {
+    @XmlElement(name = "payment_id")
     private int payment_id;
+    @XmlElement(name = "customer_id")
     private Integer customer_id;
+    @XmlElement(name = "order_id")
     private Integer order_id;
+    @XmlElement(name = "payment_amount")
     private BigDecimal payment_amount;
+    @XmlElement(name = "payment_date")
+    @XmlJavaTypeAdapter(DateAdapter.class)
     private Date payment_date;
 
     public Payments() {
