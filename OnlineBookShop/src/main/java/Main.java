@@ -65,7 +65,7 @@ public class Main {
             try (Connection connection = dataSource.getConnection()) {
                 EmployeesDAO employeesDAO = new EmployeesDAO(connection);
                 Employees newEmployee = new Employees();
-                newEmployee.setEmployee_id(12);
+                newEmployee.setEmployee_id(13);
                 newEmployee.setFirst_name("Arin");
                 newEmployee.setLast_name("Bonn");
                 newEmployee.setPosition("Manager");
