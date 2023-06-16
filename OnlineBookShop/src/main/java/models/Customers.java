@@ -1,20 +1,29 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.xml.bind.annotation.*;
-
 
 @XmlRootElement(name = "customer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Customers {
     @XmlElement(name = "customer_id")
+    @JsonProperty("customer_id")
     private int customer_id;
+
     @XmlElement(name = "first_name")
+    @JsonProperty("first_name")
     private String first_name;
+
     @XmlElement(name = "last_name")
+    @JsonProperty("last_name")
     private String last_name;
+
     @XmlElement(name = "address")
+    @JsonProperty("address")
     private String address;
+
     @XmlElement(name = "contact_details")
+    @JsonProperty("contact_details")
     private String contact_details;
 
     public Customers() {

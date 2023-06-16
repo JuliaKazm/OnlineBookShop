@@ -1,6 +1,8 @@
 package models;
 
 import java.sql.Date;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.xml.bind.annotation.*;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import jaxb.DateAdapter;
@@ -9,13 +11,20 @@ import jaxb.DateAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Orders {
     @XmlElement(name = "orders_id")
+    @JsonProperty("orders_id")
     private int orders_id;
+
     @XmlElement(name = "customer_id")
+    @JsonProperty("customer_id")
     private Integer customer_id;
+
     @XmlElement(name = "order_date")
     @XmlJavaTypeAdapter(DateAdapter.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date order_date;
+
     @XmlElement(name = "order_status")
+    @JsonProperty("order_status")
     private String order_status;
 
     public Orders() {
@@ -26,6 +35,9 @@ public class Orders {
         this.customer_id = customer_id;
         this.order_date = order_date;
         this.order_status = order_status;
+    }
+
+    public Orders(int ordersId, int customerId, String date, String pending) {
     }
 
     public int getOrders_id() {
@@ -70,4 +82,3 @@ public class Orders {
                 '}';
     }
 }
-

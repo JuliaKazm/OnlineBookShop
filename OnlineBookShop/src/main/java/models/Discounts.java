@@ -1,20 +1,28 @@
 package models;
 
 import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Discounts {
+    @JsonProperty("discount_id")
     private int discount_id;
+
+    @JsonProperty("code")
     private String code;
+
+    @JsonProperty("percentage")
     private BigDecimal percentage;
+
+    @JsonProperty("orders_orders_id")
     private int orders_orders_id;
 
     public Discounts() {
     }
 
-    public Discounts(int discount_id, String code, BigDecimal percentage, int orders_orders_id) {
+    public Discounts(int discount_id, String code, double percentage, int orders_orders_id) {
         this.discount_id = discount_id;
         this.code = code;
-        this.percentage = percentage;
+        this.percentage = BigDecimal.valueOf(percentage);
         this.orders_orders_id = orders_orders_id;
     }
 

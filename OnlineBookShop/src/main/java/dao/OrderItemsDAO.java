@@ -59,7 +59,7 @@ public class OrderItemsDAO implements IOrderItemsDAO {
             statement.setInt(2, orderItem.getOrder_id());
             statement.setInt(3, orderItem.getBook_id());
             statement.setInt(4, orderItem.getQuantity());
-            statement.setBigDecimal(5, orderItem.getPrice());
+            statement.setDouble(5, orderItem.getPrice());
 
             statement.executeUpdate();
         } catch (SQLException e) {
@@ -72,7 +72,7 @@ public class OrderItemsDAO implements IOrderItemsDAO {
             statement.setInt(1, orderItem.getOrder_id());
             statement.setInt(2, orderItem.getBook_id());
             statement.setInt(3, orderItem.getQuantity());
-            statement.setBigDecimal(4, orderItem.getPrice());
+            statement.setDouble(4, orderItem.getPrice());
             statement.setInt(5, orderItem.getItem_id());
 
             statement.executeUpdate();
@@ -92,10 +92,10 @@ public class OrderItemsDAO implements IOrderItemsDAO {
 
     private OrderItems createOrderItemFromResultSet(ResultSet resultSet) throws SQLException {
         int item_id = resultSet.getInt("item_id");
-        Integer order_id = resultSet.getInt("order_id");
-        Integer book_id = resultSet.getInt("book_id");
-        Integer quantity = resultSet.getInt("quantity");
-        BigDecimal price = resultSet.getBigDecimal("price");
+        int order_id = resultSet.getInt("order_id");
+        int book_id = resultSet.getInt("book_id");
+        int quantity = resultSet.getInt("quantity");
+        double price = resultSet.getDouble("price");
         return new OrderItems(item_id, order_id, book_id, quantity, price);
     }
 

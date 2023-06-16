@@ -1,0 +1,5 @@
+11:48:31.376 [main] INFO  json.JsonSerDeser - Customer serialized and written to JSON file.
+11:48:31.393 [main] INFO  json.JsonSerDeser - Order serialized and written to JSON file.
+11:48:31.457 [main] INFO  json.JsonSerDeser - Deserialized customer: Customers{customer_id=1, first_name='John', last_name='Doe', address='123 Main St', contact_details='john.doe@example.com'}
+11:48:31.470 [main] INFO  json.JsonSerDeser - Deserialized order: Orders{orders_id=0, customer_id=null, order_date=null, order_status='null'}
+11:49:03.360 [main] INFO  json.JsonFileCreator - JSON files created and saved successfully.

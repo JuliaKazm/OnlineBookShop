@@ -28,7 +28,7 @@ public class PaymentsDAO implements IPaymentsDAO {
             statement.setInt(1, payment.getPayment_id());
             statement.setInt(2, payment.getCustomer_id());
             statement.setInt(3, payment.getOrder_id());
-            statement.setBigDecimal(4, payment.getPayment_amount());
+            statement.setDouble(4, payment.getPayment_amount());
             statement.setDate(5, payment.getPayment_date());
             statement.executeUpdate();
         } catch (SQLException e) {
@@ -50,7 +50,7 @@ public class PaymentsDAO implements IPaymentsDAO {
         try (PreparedStatement statement = connection.prepareStatement(UPDATE)) {
             statement.setInt(1, payment.getCustomer_id());
             statement.setInt(2, payment.getOrder_id());
-            statement.setBigDecimal(3, payment.getPayment_amount());
+            statement.setDouble(3, payment.getPayment_amount());
             statement.setDate(4, payment.getPayment_date());
             statement.setInt(5, payment.getPayment_id());
             statement.executeUpdate();
@@ -77,7 +77,7 @@ public class PaymentsDAO implements IPaymentsDAO {
                 payment.setPayment_id(resultSet.getInt("payment_id"));
                 payment.setCustomer_id(resultSet.getInt("customer_id"));
                 payment.setOrder_id(resultSet.getInt("order_id"));
-                payment.setPayment_amount(resultSet.getBigDecimal("payment_amount"));
+                payment.setPayment_amount(resultSet.getDouble("payment_amount"));
                 payment.setPayment_date(resultSet.getDate("payment_date"));
                 payments.add(payment);
             }
@@ -96,7 +96,7 @@ public class PaymentsDAO implements IPaymentsDAO {
                 payment.setPayment_id(resultSet.getInt("payment_id"));
                 payment.setCustomer_id(resultSet.getInt("customer_id"));
                 payment.setOrder_id(resultSet.getInt("order_id"));
-                payment.setPayment_amount(resultSet.getBigDecimal("payment_amount"));
+                payment.setPayment_amount(resultSet.getDouble("payment_amount"));
                 payment.setPayment_date(resultSet.getDate("payment_date"));
                 return Optional.of(payment);
             }
