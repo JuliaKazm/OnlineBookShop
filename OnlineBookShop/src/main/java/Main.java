@@ -24,6 +24,7 @@ public class Main {
             try (Connection connection = dataSource.getConnection()) {
                 BooksDAO booksDAO = new BooksDAO(connection);
                 Books book = new Books();
+                book.setBook_id(12);
                 book.setTitle("The sun is yellow");
                 book.setAuthor_id(1);
                 book.setGenre("Romance");
@@ -65,7 +66,7 @@ public class Main {
             try (Connection connection = dataSource.getConnection()) {
                 EmployeesDAO employeesDAO = new EmployeesDAO(connection);
                 Employees newEmployee = new Employees();
-                newEmployee.setEmployee_id(13);
+                newEmployee.setEmployee_id(14);
                 newEmployee.setFirst_name("Arin");
                 newEmployee.setLast_name("Bonn");
                 newEmployee.setPosition("Manager");

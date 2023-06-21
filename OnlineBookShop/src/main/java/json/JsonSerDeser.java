@@ -19,7 +19,7 @@ public class JsonSerDeser {
         try {
             // Serialize objects to JSON
             Customers customer1 = new Customers(1, "John", "Doe", "123 Main St", "john.doe@example.com");
-            Orders order1 = new Orders(1001, 1, "2023-05-30", "Pending");
+            Orders order1 = new Orders(14, 1, "2023-05-30", "Pending");
 
             // Write objects to JSON file
             File customerFile = new File("/Users/j_mac/OnlineBookShop/OnlineBookShop/src/main/java/json/customers.json");

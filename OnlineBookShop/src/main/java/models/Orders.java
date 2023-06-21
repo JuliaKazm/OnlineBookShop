@@ -37,7 +37,11 @@ public class Orders {
         this.order_status = order_status;
     }
 
-    public Orders(int ordersId, int customerId, String date, String pending) {
+    public Orders(int ordersId, int customerId, String date, String status) {
+        this.orders_id = ordersId;
+        this.customer_id = customerId;
+        this.order_date = Date.valueOf(date);
+        this.order_status = status;
     }
 
     public int getOrders_id() {
@@ -82,3 +86,4 @@ public class Orders {
                 '}';
     }
 }
+

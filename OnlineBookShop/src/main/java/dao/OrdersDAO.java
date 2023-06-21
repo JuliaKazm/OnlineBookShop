@@ -23,6 +23,10 @@ public class OrdersDAO implements IOrdersDAO {
         this.connection = connection;
     }
 
+    public OrdersDAO() {
+
+    }
+
     public Optional<Orders> findById(int ordersId) {
         try (PreparedStatement statement = connection.prepareStatement(SELECT_BY_ID)) {
             statement.setInt(1, ordersId);

@@ -20,6 +20,10 @@ public class BooksDAO implements IBooksDAO {
         this.connection = connection;
     }
 
+    public BooksDAO() {
+
+    }
+
     @Override
     public Optional<Books> findById(int id) {
         String query = "SELECT * FROM Books WHERE book_id = ?";

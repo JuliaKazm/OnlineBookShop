@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.BooksMapper">
+    <select id="selectBooksById" resultType="models.Books" resultMap="mapper.BooksMapper.booksResultMap">
+        SELECT book_id, title, author_id, genre, publishers_publisher_id, bookStock_book_stock_id
+        FROM books
+        WHERE book_id = #{id}
+    </select>
+
+    <resultMap id="booksResultMap" type="models.Books" autoMapping="false">
+        <result column="book_id" property="book_id" />
+        <result column="title" property="title" />
+        <result column="author_id" property="author_id" />
+        <result column="genre" property="genre" />
+        <result column="publishers_publisher_id" property="publishers_publisher_id" />
+        <result column="bookStock_book_stock_id" property="bookStock_book_stock_id" />
+    </resultMap>
+
+    <select id="selectAllBooks" resultType="models.Books" resultMap="mapper.BooksMapper.booksResultMap">
+        SELECT book_id, title, author_id, genre, publishers_publisher_id, bookStock_book_stock_id
+        FROM books
+    </select>
+
+    <insert id="insertBooks">
+        INSERT INTO books (book_id, title, author_id, genre, publishers_publisher_id, bookStock_book_stock_id)
+        VALUES (#{book_id}, #{title}, #{author_id}, #{genre}, #{publishers_publisher_id}, #{bookStock_book_stock_id})
+    </insert>
+
+    <update id="updateBooks">
+        UPDATE books
+        SET book_id = #{book_id},
+        title = #{title},
+        author_id = #{author_id},
+        genre = #{genre},
+        publishers_publisher_id = #{publishers_publisher_id},
+        bookStock_book_stock_id = #{bookStock_book_stock_id}
+        WHERE book_id = #{book_id}
+    </update>
+
+    <delete id="deleteBooks">
+        DELETE FROM books WHERE book_id = #{id}
+    </delete>
+</mapper>

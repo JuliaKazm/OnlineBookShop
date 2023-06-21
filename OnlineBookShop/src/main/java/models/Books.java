@@ -1,7 +1,7 @@
 package models;
 
 public class Books {
-    private int book_id;
+    private Integer book_id;
     private String title;
     private int author_id;
     private String genre;
@@ -20,11 +20,11 @@ public class Books {
         this.bookStock_book_stock_id = bookStock_book_stock_id;
     }
 
-    public int getBook_id() {
+    public Integer getBook_id() {
         return book_id;
     }
 
-    public void setBook_id(int book_id) {
+    public void setBook_id(Integer book_id) {
         this.book_id = book_id;
     }
 

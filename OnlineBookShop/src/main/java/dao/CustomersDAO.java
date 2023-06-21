@@ -20,6 +20,10 @@ public class CustomersDAO implements ICustomersDAO {
         this.connection = connection;
     }
 
+    public CustomersDAO() {
+
+    }
+
     public void create(Customers customer) {
         try (PreparedStatement statement = connection.prepareStatement(INSERT)) {
             statement.setInt(1, customer.getCustomer_id());
