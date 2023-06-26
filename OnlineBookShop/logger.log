@@ -37,3 +37,5 @@
 21:56:33.384 [main] INFO  mybatis.MyBatisRunner - Updated Order: Orders{orders_id=13, customer_id=4, order_date=2023-06-21, order_status='shipped'}
 21:56:33.398 [main] INFO  mybatis.MyBatisRunner - Deleted Order: 13
 
+20:56:45.578 [main] INFO  Main - Creating Customers object using builder pattern
+20:56:45.579 [main] INFO  Main - Customers object created: Customers{customer_id=15, first_name='Linda', last_name='Blue', address='989 Main St, Austin, TX 3374', contact_details='linda.blue@example.com'}

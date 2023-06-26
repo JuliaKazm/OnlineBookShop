@@ -6,6 +6,7 @@ import dao.CustomersDAO;
 import models.Customers;
 import services.CustomersServiceImpl;
 import services.CustomersService;
+import patterns.CustomersBuilder;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -66,7 +67,7 @@ public class Main {
             try (Connection connection = dataSource.getConnection()) {
                 EmployeesDAO employeesDAO = new EmployeesDAO(connection);
                 Employees newEmployee = new Employees();
-                newEmployee.setEmployee_id(14);
+                newEmployee.setEmployee_id(18);
                 newEmployee.setFirst_name("Arin");
                 newEmployee.setLast_name("Bonn");
                 newEmployee.setPosition("Manager");
@@ -130,6 +131,17 @@ public class Main {
                     customersService.deleteCustomer(deleteCustomer.getCustomer_id());
                     logger.info("Deleted customer: {}", deleteCustomer);
                 }
+
+                //Creating Customers object using builder pattern
+                logger.info("Creating Customers object using builder pattern");
+                Customers customerB = new CustomersBuilder()
+                        .withCustomerId(15)
+                        .withFirstName("Linda")
+                        .withLastName("Blue")
+                        .withAddress("989 Main St, Austin, TX 3374")
+                        .withContactDetails("linda.blue@example.com")
+                        .build();
+                logger.info("Customers object created: {}", customerB);
             }
         } catch (SQLException e) {
             logger.error("Error occurred while executing JDBC operations: {}", e.getMessage());
